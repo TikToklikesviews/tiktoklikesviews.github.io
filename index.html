@@ -40,7 +40,7 @@
         
         header {
             text-align: center;
-            padding: 2rem 0 1rem;
+            padding: 2rem 0;
         }
         
         .logo {
@@ -354,71 +354,6 @@
             color: var(--primary);
         }
         
-        /* Adsterra Ad Styles */
-        .ad-container {
-            margin: 1.5rem auto;
-            text-align: center;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            max-width: 100%;
-        }
-        
-        .ad-label {
-            font-size: 0.75rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-        
-        .ad-banner {
-            width: 100%;
-            min-height: 90px;
-            background: rgba(40, 40, 40, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .ad-sidebar {
-            width: 100%;
-            min-height: 250px;
-            background: rgba(40, 40, 40, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .ad-content {
-            color: var(--gray);
-            padding: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        /* Layout adjustments for ads */
-        .ad-flex-container {
-            display: flex;
-            gap: 20px;
-            margin: 1.5rem 0;
-        }
-        
-        .main-content {
-            flex: 1;
-        }
-        
-        .ad-sidebar-container {
-            width: 160px;
-            flex-shrink: 0;
-        }
-        
         @media (max-width: 768px) {
             .services {
                 grid-template-columns: repeat(2, 1fr);
@@ -432,19 +367,6 @@
             .stat {
                 margin-bottom: 1rem;
             }
-            
-            .ad-flex-container {
-                flex-direction: column;
-            }
-            
-            .ad-sidebar-container {
-                width: 100%;
-                order: 2;
-            }
-            
-            .ad-sidebar {
-                min-height: 150px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -455,55 +377,10 @@
             .logo {
                 font-size: 2.2rem;
             }
-            
-            .ad-banner {
-                min-height: 70px;
-            }
-        }
-        
-        /* Footer navigation */
-        .site-footer {
-            margin-top: 3rem;
-            padding: 1.5rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-nav a {
-            color: var(--gray);
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .footer-nav a:hover {
-            color: var(--primary);
-        }
-        
-        .copyright {
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
-    <!-- Adsterra Ad Header Banner -->
-    <div class="container">
-        <div class="ad-label">Advertisement</div>
-        <div class="ad-banner">
-            <!-- Adsterra Banner Ad -->
-            <div id="adsterra-banner"></div>
-        </div>
-    </div>
-
     <div class="container">
         <header>
             <h1 class="logo">TikBoost</h1>
@@ -529,236 +406,206 @@
             </div>
         </div>
         
-        <div class="ad-flex-container">
-            <div class="main-content">
-                <div class="card">
-                    <h2 class="card-title"><i class="fas fa-fire"></i> Select Service</h2>
-                    <div class="services">
-                        <div class="service active" data-service="views">
-                            <i class="fas fa-eye"></i>
-                            <div class="service-name">Views</div>
-                            <div class="service-desc">Increase video views</div>
-                        </div>
-                        <div class="service" data-service="likes">
-                            <i class="fas fa-heart"></i>
-                            <div class="service-name">Likes</div>
-                            <div class="service-desc">Get more likes</div>
-                        </div>
-                        <div class="service" data-service="followers">
-                            <i class="fas fa-users"></i>
-                            <div class="service-name">Followers</div>
-                            <div class="service-desc">Grow your audience</div>
-                        </div>
-                        <div class="service" data-service="comments">
-                            <i class="fas fa-comment"></i>
-                            <div class="service-name">Comments</div>
-                            <div class="service-desc">Engage your viewers</div>
-                        </div>
-                        <div class="service" data-service="shares">
-                            <i class="fas fa-share"></i>
-                            <div class="service-name">Shares</div>
-                            <div class="service-desc">Increase visibility</div>
-                        </div>
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-fire"></i> Select Service</h2>
+            <div class="services">
+                <div class="service active" data-service="views">
+                    <i class="fas fa-eye"></i>
+                    <div class="service-name">Views</div>
+                    <div class="service-desc">Increase video views</div>
+                </div>
+                <div class="service" data-service="likes">
+                    <i class="fas fa-heart"></i>
+                    <div class="service-name">Likes</div>
+                    <div class="service-desc">Get more likes</div>
+                </div>
+                <div class="service" data-service="followers">
+                    <i class="fas fa-users"></i>
+                    <div class="service-name">Followers</div>
+                    <div class="service-desc">Grow your audience</div>
+                </div>
+                <div class="service" data-service="comments">
+                    <i class="fas fa-comment"></i>
+                    <div class="service-name">Comments</div>
+                    <div class="service-desc">Engage your viewers</div>
+                </div>
+                <div class="service" data-service="shares">
+                    <i class="fas fa-share"></i>
+                    <div class="service-name">Shares</div>
+                    <div class="service-desc">Increase visibility</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <!-- Views Service -->
+            <div class="service-content active" id="views-content">
+                <h2 class="card-title"><i class="fas fa-eye"></i> TikTok Views Generator</h2>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <div>Fast Delivery</div>
+                        <div class="counter">10-30 minutes</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-infinity"></i>
+                        <div>Maximum Views</div>
+                        <div class="counter">Up to 10,000</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>Safe & Secure</div>
+                        <div class="counter">No Password</div>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <!-- Views Service -->
-                    <div class="service-content active" id="views-content">
-                        <h2 class="card-title"><i class="fas fa-eye"></i> TikTok Views Generator</h2>
-                        
-                        <div class="service-features">
-                            <div class="feature">
-                                <i class="fas fa-bolt"></i>
-                                <div>Fast Delivery</div>
-                                <div class="counter">10-30 minutes</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-infinity"></i>
-                                <div>Maximum Views</div>
-                                <div class="counter">Up to 10,000</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-shield-alt"></i>
-                                <div>Safe & Secure</div>
-                                <div class="counter">No Password</div>
-                            </div>
-                        </div>
-                        
-                        <div class="input-group">
-                            <label for="video-url-views"><i class="fas fa-link"></i> Enter TikTok Video URL</label>
-                            <input type="text" id="video-url-views" placeholder="https://www.tiktok.com/@username/video/123456789">
-                        </div>
-                        <div class="input-group">
-                            <label for="views-amount"><i class="fas fa-sliders-h"></i> Number of Views (Max 10,000)</label>
-                            <input type="number" id="views-amount" placeholder="1000" max="10000" min="100">
-                        </div>
-                        
-                        <div class="captcha-container">
-                            <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
-                            <div class="captcha-text" id="captcha-views">A7B3K</div>
-                            <div class="input-group">
-                                <input type="text" id="captcha-input-views" placeholder="Enter CAPTCHA code">
-                            </div>
-                        </div>
-                        
-                        <button id="generate-views">
-                            <span class="loader" id="views-loader"></span>
-                            <i class="fas fa-bolt"></i> Generate Views
-                        </button>
-                        
-                        <div class="progress">
-                            <div class="progress-bar" id="views-progress"></div>
-                        </div>
-                        
-                        <div class="result" id="views-result"></div>
-                    </div>
-                    
-                    <!-- Likes Service -->
-                    <div class="service-content" id="likes-content">
-                        <h2 class="card-title"><i class="fas fa-heart"></i> TikTok Likes Generator</h2>
-                        
-                        <div class="service-features">
-                            <div class="feature">
-                                <i class="fas fa-rocket"></i>
-                                <div>Instant Delivery</div>
-                                <div class="counter">5-15 minutes</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <div>Maximum Likes</div>
-                                <div class="counter">Up to 5,000</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-lock"></i>
-                                <div>100% Safe</div>
-                                <div class="counter">No Login</div>
-                            </div>
-                        </div>
-                        
-                        <div class="input-group">
-                            <label for="video-url-likes"><i class="fas fa-link"></i> Enter TikTok Video URL</label>
-                            <input type="text" id="video-url-likes" placeholder="https://www.tiktok.com/@username/video/123456789">
-                        </div>
-                        <div class="input-group">
-                            <label for="likes-amount"><i class="fas fa-sliders-h"></i> Number of Likes (Max 5,000)</label>
-                            <input type="number" id="likes-amount" placeholder="500" max="5000" min="50">
-                        </div>
-                        
-                        <div class="captcha-container">
-                            <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
-                            <div class="captcha-text" id="captcha-likes">X9Z2M</div>
-                            <div class="input-group">
-                                <input type="text" id="captcha-input-likes" placeholder="Enter CAPTCHA code">
-                            </div>
-                        </div>
-                        
-                        <button id="generate-likes">
-                            <span class="loader" id="likes-loader"></span>
-                            <i class="fas fa-heart"></i> Generate Likes
-                        </button>
-                        
-                        <div class="progress">
-                            <div class="progress-bar" id="likes-progress"></div>
-                        </div>
-                        
-                        <div class="result" id="likes-result"></div>
-                    </div>
-                    
-                    <!-- Followers Service -->
-                    <div class="service-content" id="followers-content">
-                        <h2 class="card-title"><i class="fas fa-users"></i> TikTok Followers Generator</h2>
-                        
-                        <div class="service-features">
-                            <div class="feature">
-                                <i class="fas fa-user-plus"></i>
-                                <div>Real Followers</div>
-                                <div class="counter">Active Accounts</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-chart-line"></i>
-                                <div>Maximum Followers</div>
-                                <div class="counter">Up to 2,000</div>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <div>Permanent</div>
-                                <div class="counter">No Drop</div>
-                            </div>
-                        </div>
-                        
-                        <div class="input-group">
-                            <label for="username-followers"><i class="fas fa-at"></i> Enter TikTok Username</label>
-                            <input type="text" id="username-followers" placeholder="@username">
-                        </div>
-                        <div class="input-group">
-                            <label for="followers-amount"><i class="fas fa-sliders-h"></i> Number of Followers (Max 2,000)</label>
-                            <input type="number" id="followers-amount" placeholder="200" max="2000" min="20">
-                        </div>
-                        
-                        <div class="captcha-container">
-                            <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
-                            <div class="captcha-text" id="captcha-followers">R4T8P</div>
-                            <div class="input-group">
-                                <input type="text" id="captcha-input-followers" placeholder="Enter CAPTCHA code">
-                            </div>
-                        </div>
-                        
-                        <button id="generate-followers">
-                            <span class="loader" id="followers-loader"></span>
-                            <i class="fas fa-user-plus"></i> Generate Followers
-                        </button>
-                        
-                        <div class="progress">
-                            <div class="progress-bar" id="followers-progress"></div>
-                        </div>
-                        
-                        <div class="result" id="followers-result"></div>
-                    </div>
-                    
-                    <!-- Comments Service -->
-                    <div class="service-content" id="comments-content">
-                        <h2 class="card-title"><i class="fas fa-comment"></i> TikTok Comments Generator</h2>
-                        <p>Service currently in maintenance. Please try again later.</p>
-                    </div>
-                    
-                    <!-- Shares Service -->
-                    <div class="service-content" id="shares-content">
-                        <h2 class="card-title"><i class="fas fa-share"></i> TikTok Shares Generator</h2>
-                        <p>Service currently in maintenance. Please try again later.</p>
+                <div class="input-group">
+                    <label for="video-url-views"><i class="fas fa-link"></i> Enter TikTok Video URL</label>
+                    <input type="text" id="video-url-views" placeholder="https://www.tiktok.com/@username/video/123456789">
+                </div>
+                <div class="input-group">
+                    <label for="views-amount"><i class="fas fa-sliders-h"></i> Number of Views (Max 10,000)</label>
+                    <input type="number" id="views-amount" placeholder="1000" max="10000" min="100">
+                </div>
+                
+                <div class="captcha-container">
+                    <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
+                    <div class="captcha-text" id="captcha-views">A7B3K</div>
+                    <div class="input-group">
+                        <input type="text" id="captcha-input-views" placeholder="Enter CAPTCHA code">
                     </div>
                 </div>
+                
+                <button id="generate-views">
+                    <span class="loader" id="views-loader"></span>
+                    <i class="fas fa-bolt"></i> Generate Views
+                </button>
+                
+                <div class="progress">
+                    <div class="progress-bar" id="views-progress"></div>
+                </div>
+                
+                <div class="result" id="views-result"></div>
             </div>
             
-            <!-- Adsterra Ad Sidebar -->
-            <div class="ad-sidebar-container">
-                <div class="ad-label">Advertisement</div>
-                <div class="ad-sidebar">
-                    <!-- Adsterra Sidebar Ad -->
-                    <div id="adsterra-sidebar"></div>
+            <!-- Likes Service -->
+            <div class="service-content" id="likes-content">
+                <h2 class="card-title"><i class="fas fa-heart"></i> TikTok Likes Generator</h2>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <div>Instant Delivery</div>
+                        <div class="counter">5-15 minutes</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div>Maximum Likes</div>
+                        <div class="counter">Up to 5,000</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lock"></i>
+                        <div>100% Safe</div>
+                        <div class="counter">No Login</div>
+                    </div>
                 </div>
+                
+                <div class="input-group">
+                    <label for="video-url-likes"><i class="fas fa-link"></i> Enter TikTok Video URL</label>
+                    <input type="text" id="video-url-likes" placeholder="https://www.tiktok.com/@username/video/123456789">
+                </div>
+                <div class="input-group">
+                    <label for="likes-amount"><i class="fas fa-sliders-h"></i> Number of Likes (Max 5,000)</label>
+                    <input type="number" id="likes-amount" placeholder="500" max="5000" min="50">
+                </div>
+                
+                <div class="captcha-container">
+                    <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
+                    <div class="captcha-text" id="captcha-likes">X9Z2M</div>
+                    <div class="input-group">
+                        <input type="text" id="captcha-input-likes" placeholder="Enter CAPTCHA code">
+                    </div>
+                </div>
+                
+                <button id="generate-likes">
+                    <span class="loader" id="likes-loader"></span>
+                    <i class="fas fa-heart"></i> Generate Likes
+                </button>
+                
+                <div class="progress">
+                    <div class="progress-bar" id="likes-progress"></div>
+                </div>
+                
+                <div class="result" id="likes-result"></div>
+            </div>
+            
+            <!-- Followers Service -->
+            <div class="service-content" id="followers-content">
+                <h2 class="card-title"><i class="fas fa-users"></i> TikTok Followers Generator</h2>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <i class="fas fa-user-plus"></i>
+                        <div>Real Followers</div>
+                        <div class="counter">Active Accounts</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <div>Maximum Followers</div>
+                        <div class="counter">Up to 2,000</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Permanent</div>
+                        <div class="counter">No Drop</div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="username-followers"><i class="fas fa-at"></i> Enter TikTok Username</label>
+                    <input type="text" id="username-followers" placeholder="@username">
+                </div>
+                <div class="input-group">
+                    <label for="followers-amount"><i class="fas fa-sliders-h"></i> Number of Followers (Max 2,000)</label>
+                    <input type="number" id="followers-amount" placeholder="200" max="2000" min="20">
+                </div>
+                
+                <div class="captcha-container">
+                    <p><i class="fas fa-robot"></i> Please verify you're not a robot</p>
+                    <div class="captcha-text" id="captcha-followers">R4T8P</div>
+                    <div class="input-group">
+                        <input type="text" id="captcha-input-followers" placeholder="Enter CAPTCHA code">
+                    </div>
+                </div>
+                
+                <button id="generate-followers">
+                    <span class="loader" id="followers-loader"></span>
+                    <i class="fas fa-user-plus"></i> Generate Followers
+                </button>
+                
+                <div class="progress">
+                    <div class="progress-bar" id="followers-progress"></div>
+                </div>
+                
+                <div class="result" id="followers-result"></div>
+            </div>
+            
+            <!-- Comments Service -->
+            <div class="service-content" id="comments-content">
+                <h2 class="card-title"><i class="fas fa-comment"></i> TikTok Comments Generator</h2>
+                <p>Service currently in maintenance. Please try again later.</p>
+            </div>
+            
+            <!-- Shares Service -->
+            <div class="service-content" id="shares-content">
+                <h2 class="card-title"><i class="fas fa-share"></i> TikTok Shares Generator</h2>
+                <p>Service currently in maintenance. Please try again later.</p>
             </div>
         </div>
         
-        <!-- Adsterra Ad Footer Banner -->
-        <div class="ad-label">Advertisement</div>
-        <div class="ad-banner">
-            <!-- Adsterra Footer Ad -->
-            <div id="adsterra-footer"></div>
-        </div>
-        
-        <footer class="site-footer">
-            <div class="inner">
-                <nav class="footer-nav">
-                    <a href="index.html">Home</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="about.html">About</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="terms.html">Terms</a>
-                </nav>
-                <div class="copyright">© <span id="y"></span> TikBoost</div>
-            </div>
+        <footer>
+            <p>© 2023 TikBoost - Free TikTok Growth Tools</p>
             <p class="disclaimer">This is a simulation for demonstration purposes only. We do not actually generate TikTok views, likes, or followers. This tool is created to showcase frontend development capabilities.</p>
         </footer>
     </div>
@@ -975,27 +822,5 @@
             generateCaptcha(captchaTextFollowers);
         });
     </script>
-    
-    <!-- Adsterra Ad Code -->
-    <script type="text/javascript">
-        // Adsterra ad implementation
-        atOptions = {
-            'key' : 'your-adsterra-key-here',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-        document.write('<scr' + 'ipt type="text/javascript" src="//www.profitableratecpm.com/your-adsterra-key-here/invoke.js"></scr' + 'ipt>');
-    </script>
-    
-    <script type="text/javascript">
-        // Sidebar ad
-        atOptions = {
-            'key' : 'your-adsterra-key-here',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 160,
-            'params' : {}
-        };
-        document.write('<scr
+</body>
+</html>
