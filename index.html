@@ -822,5 +822,21 @@
             generateCaptcha(captchaTextFollowers);
         });
     </script>
+    <!-- Footer navigation (paste just above </body>) -->
+<footer class="site-footer">
+  <div class="inner">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <div class="copyright">© <span id="y"></span> TikBoost</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
